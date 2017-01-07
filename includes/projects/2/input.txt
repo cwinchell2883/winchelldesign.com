@@ -1,0 +1,27 @@
+﻿&menuname1=About us
+
+&menuname2=Skills
+
+&menuname3=Service
+
+&menuname4=Resources
+
+&menuname5=Case Study
+
+&menuname6=Contact us
+
+&menuname7=Sitemap
+
+
+
+
+## Explanation of menu  ##
+
+&menu description1=Things like business process, values, mission statement, and how we got started.
+
+&menu description2=This is where you can learn what skills we have to offer you.
+
+&menu description3=Better than Ibuprofen, click here to solve what ails you or just ask a question.
+
+&menu description4=For the Do It Yourselfers - Links to partners and resources
+&menu description5=What size company do you have? We have a Case Study you can relate to.

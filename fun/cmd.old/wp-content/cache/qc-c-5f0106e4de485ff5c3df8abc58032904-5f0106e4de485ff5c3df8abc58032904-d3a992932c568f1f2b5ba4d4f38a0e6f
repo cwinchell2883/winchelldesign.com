@@ -1,0 +1,37 @@
+a:7:{i:0;s:44:"Last-Modified: Tue, 28 Apr 2015 04:12:03 GMT";i:1;s:60:"X-Pingback: http://www.winchelldesign.com/fun/cmd/xmlrpc.php";i:2;s:52:"Set-Cookie: PHPSESSID=1mYO-ZDVtgX-yeqVfHE-V2; path=/";i:3;s:38:"Expires: Thu, 19 Nov 1981 08:52:00 GMT";i:4;s:77:"Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0";i:5;s:16:"Pragma: no-cache";i:6;s:38:"Content-Type: text/html; charset=utf-8";}<!--headers--><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Command Prompt</title>
+<meta http-equiv="Content-Type" content="text/html;charset=" >
+<style type="text/css" media="screen">
+	@import url( http://www.winchelldesign.com/fun/cmd/wp-content/themes/cmd2/usr/share/style.css.php );
+</style>
+<script type="text/javascript" src="http://www.winchelldesign.com/fun/cmd/wp-content/themes/cmd2/lib/keycodes.js"></script>
+<script type="text/javascript" src="http://www.winchelldesign.com/fun/cmd/wp-content/themes/cmd2/lib/cli.js.php"></script>
+</head>
+<body onload="document.getElementById('welcome').style.visibility='visible';initializeCLI();scroller();" onkeydown="handleKeyEvent(event);" onkeyup="handleKeyEvent(event);">
+	<div id="pagealert"> --More-- </div>
+	<div id="indicators"><span id="ALTindicator">Alt-</span><span id="CTRLindicator">Ctrl-</span> <span id="SCRLOCKindicator">SCR LOCK</span></div>
+	<div id="spinnerdiv" style="display:none;font-weight:900;">-</div>
+	<form onsubmit="inputArea.focus();" action="http://www.winchelldesign.com/fun/cmd"><div id="cform"><input name="preInputArea" type="text" class="stealth"><textarea name="inputArea" rows="5" cols="10" class="stealth" taborder="0"></textarea><input name="postInputArea" type="text" class="stealth"></div></form>
+<div id="scr" onclick="scroller();inputArea.focus();">
+	<div id="d_and_c">
+		<div id="display">
+<!--<div style="height:100%;">&nbsp;</div>-->
+<script type="text/javascript">
+var s=document.getElementById('scr');
+document.write('<'+'div style=\"height:'+s.offsetHeight+'px\">&nbsp;<'+'/div>');
+</script>
+
+<div id="welcome" style="">Microsoft Windows [Version 6.1.7600]<br />Copyright (c) 2009 Microsoft Corporation. All rights reserved.</div>
+<noscript>
+<p>Sorry, the CLI requires JavaScript to work. Please turn on JavaScript.</p>
+</noscript>
+		</div>
+		<div id="bottomline"><span id="prompt"></span><span id="lcommand"></span><a id="undercsr" href="http://www.winchelldesign.com/fun/cmd?yoohoo">&nbsp;</a><span id="rcommand"></span></div>
+	</div>
+</div>
+</body>
+</html>
+<!-- This Quick Cache file was built for (  www.winchelldesign.com/fun/cmd/ ) in 1.88231 seconds, on Apr 28th, 2015 at 4:12 am UTC. -->
+<!-- This Quick Cache file will automatically expire ( and be re-built automatically ) on Apr 28th, 2015 at 4:12 am UTC -->

@@ -1,0 +1,168 @@
+html, body {
+	margin: 0px;
+	background: #fff;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:0.95em;
+	color:#4d4948;
+}
+
+h1 {
+	font-size:150%;
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	color:#4d4948;
+}
+
+.clear {
+	clear:both;
+}
+
+#wrapper {
+	margin:50px auto 0 auto;
+	background:url('img/wrapper-bg.png') no-repeat;
+	width:765px;
+	height:356px;
+}
+
+#wrapper #content {
+	padding:45px 30px 0 30px;
+}
+
+#wrapper #content #left-nav {
+	float:left;
+	font-size:95%;
+}
+
+#wrapper #content #left-nav ul {
+	padding:0 0 50px 0;
+	margin:0;
+}
+
+#wrapper #content #left-nav ul li {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+#wrapper #content #left-nav ul li a {
+	text-decoration:none;
+}
+
+#wrapper #content #left-nav ul li a:hover {
+	color:#ff0505;
+	text-decoration:underline;
+}
+
+#wrapper #content #left-nav #build a {
+	width:155px;
+	height:124px;
+	display:block;
+}
+
+#wrapper #content #left-nav #build span {
+	display:none;
+}
+
+#wrapper #content #main {
+	float:right;
+	width:500px;
+	font-size:90%;
+}
+
+#wrapper #content #main #regbox {
+	padding: 15px 0 0 0;
+}
+
+#wrapper #content #main #regbox label {
+	width:100px;
+	float:left;
+}
+
+
+#wrapper #errors {
+	margin-top:15px;
+	color:#4d4948;
+	background-color:#fffebe;
+	border: 1px solid #cbcbcb;
+	font-size:90%;
+}
+
+#wrapper #success {
+	margin-top:15px;
+	color:#4d4948;
+	background-color:#bce9b5;
+	border: 1px solid #7ace6c;
+	padding:10px;
+}
+
+.style1 {
+   font-size: 9px;
+}
+.style2 {
+   font-size: 12px;
+}
+.style3 {
+   font-size: 14px;
+}
+.style4 {
+   font-size: 16px;
+}
+.style5 {
+   font-size: 18px;
+   font-weight: bold;
+}
+table {
+	table-layout: auto;
+}
+th {
+   border: solid 1px #000;
+   padding-left: 20px;
+   text-align: left;
+   color: #FFF;
+}
+th.head1 {
+   background-color:  #609;
+}
+th.head2 {
+   background-color: #060;
+}
+th.head3 {
+   background-color: #00C;
+}
+th.head4 {
+   background-color: #C00;
+}
+th.head5 {
+   background-color: #F60;
+}
+td {
+   text-align: right;
+   padding-right: 5px;
+}
+td.field {
+   width: 130px;
+   font-weight: bold;
+}
+td.group {
+   font-weight: bold;
+   text-decoration: underline;
+}
+td.center {
+   text-align: center;
+}
+td.fan {
+   border-left: solid;
+   border-left-width: thin;
+   border-left-color: #000;
+}
+td.top {
+   vertical-align: top;
+}
+td.answer {
+   font-style: italic;
+   text-align: left;
+   padding-left: 5px;
+}

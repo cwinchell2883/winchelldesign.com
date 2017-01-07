@@ -1,0 +1,15 @@
+div {
+	text-align: center;
+}
+
+div.box {
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	background: orange;
+}
+
+p {
+	position: absolute;
+	bottom: 0px;
+}

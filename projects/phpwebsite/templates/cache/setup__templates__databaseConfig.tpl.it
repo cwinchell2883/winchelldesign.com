@@ -1,0 +1,18 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:662:"<h2>{TITLE}</h2>
+{__main__}
+{START_FORM}
+<p>{DBTYPE_LABEL} {DBTYPE}<br />
+{DBTYPE_DEF}</p>
+<p>{DBNAME_LABEL} {DBNAME} <span class="error">{DBNAME_ERR}</span><br />
+{DBNAME_DEF}</p>
+<p>{DBUSER_LABEL} {DBUSER} <span class="error">{DBUSER_ERR}</span><br />
+{DBUSER_DEF}</p>
+<p>{DBPASS_LABEL} {DBPASS} <span class="error">{DBPASS_ERR}</span><br />
+{DBPASS_DEF}</p>
+<p>{DBPREFIX_LABEL} {DBPREFIX} <span class="error">{DBPREF_ERR}</span><br />
+{DBPREF_DEF}</p>
+<p>{DBPORT_LABEL} {DBPORT} <span class="error">{DBPORT_ERR}</span><br />
+{DBPORT_DEF}</p>
+<p>{DBHOST_LABEL} {DBHOST} <span class="error">{DBHOST_ERR}</span><br />
+{DBHOST_DEF}</p>
+{DEFAULT_SUBMIT} {END_FORM}";s:4:"main";s:28:"<p id="main-text">{MAIN}</p>";}s:9:"variables";a:2:{s:10:"__global__";a:32:{s:5:"TITLE";b:1;s:8:"__main__";b:1;s:10:"START_FORM";b:1;s:12:"DBTYPE_LABEL";b:1;s:6:"DBTYPE";b:1;s:10:"DBTYPE_DEF";b:1;s:12:"DBNAME_LABEL";b:1;s:6:"DBNAME";b:1;s:10:"DBNAME_ERR";b:1;s:10:"DBNAME_DEF";b:1;s:12:"DBUSER_LABEL";b:1;s:6:"DBUSER";b:1;s:10:"DBUSER_ERR";b:1;s:10:"DBUSER_DEF";b:1;s:12:"DBPASS_LABEL";b:1;s:6:"DBPASS";b:1;s:10:"DBPASS_ERR";b:1;s:10:"DBPASS_DEF";b:1;s:14:"DBPREFIX_LABEL";b:1;s:8:"DBPREFIX";b:1;s:10:"DBPREF_ERR";b:1;s:10:"DBPREF_DEF";b:1;s:12:"DBPORT_LABEL";b:1;s:6:"DBPORT";b:1;s:10:"DBPORT_ERR";b:1;s:10:"DBPORT_DEF";b:1;s:12:"DBHOST_LABEL";b:1;s:6:"DBHOST";b:1;s:10:"DBHOST_ERR";b:1;s:10:"DBHOST_DEF";b:1;s:14:"DEFAULT_SUBMIT";b:1;s:8:"END_FORM";b:1;}s:4:"main";a:1:{s:4:"MAIN";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:4:"main";b:1;}s:4:"main";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:4:"main";a:0:{}}}

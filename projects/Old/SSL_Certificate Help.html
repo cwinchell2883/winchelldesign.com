@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body
+{
+	background: #FFFFFF;
+	margin: 10px auto 0 45px;
+	line-height: 14px;
+	font-size: 12px;
+}
+h1, p, a, a:hover
+{
+	font-family: "Times New Roman", Times, serif;
+}
+h1
+{
+	font-size: 14px;
+	font-style: italic;
+	color: #0000FF;
+}
+p
+{
+	font-weight: bold;
+	color: #000000;
+	margin: 0 auto 0 auto;
+}
+a
+{
+	text-decoration: none;
+	color: #FF0000;
+}
+a:hover
+{
+	text-decoration: underline;
+	color: #FF0000;
+}
+#wrap
+{
+	width: 100%;
+}
+#nav
+{
+	width: 30%;
+	margin: 0 auto 0 auto;
+}
+#spacer
+{
+	width: 100%;
+	margin: 25px auto 0 auto;
+}
+#content
+{
+	width: 100%;
+	margin: 0 auto 0 auto;
+}
+.num
+{
+	margin: 0 auto 5px auto;
+	color: #0066FF;
+	font-style: italic;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="nav">
+		<div><p>Choose from our detailed faqs below:</p>
+    	<div>- <a href="#faq1">How do I generate a private key and CSR on Microsoft IIS 6.0?</a></div>
+    	<div>- <a href="#faq2">How do I backup the private key on Microsoft IIS 6.0?</a></div>
+        <div>- <a href="#faq3">How do I backup the certificate with the private key file attached on Microsoft IIS 6.0?</a></div>
+    	<div>- <a href="#faq4">How do I install the certificate on Microsoft IIS 6.0?</a></div>
+    	<div>- <a href="#faq5">How do I create a renewal request in IIS 6.0?</a></div>
+    	<div>- <a href="#faq6">The option: "Yes, export the private key" is greyed out"</a></div>
+    	<div>- <a href="#faq7">How do I generate a CSR in Microsoft IIS 6.0 without removing the current certificate?</a></div>
+    	<div>- <a href="#faq8">How do I move a certificate from IIS 6.0 to IIS 6.0?</a></div>
+    	<div>- <a href="#faq9">How do I import a .pfx request backup file into IIS 6.0?</a></div>
+    	<div>- <a href="#faq10">I installed the certificate on Microsoft IIS 6.0 but it does not make a SSL connection. I get an error "Page cannot be displayed"</a></div>
+    	<div>- <a href="#faq11">No option to process pending request in Microsoft IIS 6.0</a></div>
+	</div>
+    <div id="spacer">&nbsp;</div>
+    <div id="content">
+    	<div><a name="faq1"><h1>How do I generate a private key and CSR on Microsoft IIS 6.0?</h1></a></div>
+        <div><p>Key and CSR Generation Instructions<br /><br />An Important Note Before You Start:</p></div>
+        <div>By far the most common problem users have when going through this process is related to private keys. If you lose or cannot access a private key, you cannot use the certificate issued to you and will need to request a free reissue. To ensure this never happens, it is advised that a backup of the private key file is made and that a note is made of the password that is used to protect the export of the private key.<br />&nbsp;</div>
+    	<div class="num">1. Start the Key/CSR Generation Process</div>
+        <div>Under Administrative Tools, open the Internet Services Manager. Then open up the properties window for the website you wish to request the certificate for. Right-clicking on the particular website will open up its properties.<br />&nbsp;</div>
+        <div class="num">2. Click the Directory Security tab</div>
+        <div>Click the Directory Security tab and then click on the "Server Certificate" button in the Secure communications section. This will start the Web Site Certificate Wizard.<br />&nbsp;</div>
+        <div class="num">3. Select "Create a new certificate"</div>
+        <div>From the Web Site Certificate Wizard, select the "Create a new Certificate" option.<br />&nbsp;</div>
+        <div class="num">4. Prepare the request</div>
+        <div>Select the "Prepare the request now, but send it later" option from the list. You will need to prepare the request now but will only submit the request (CSR) via our online request forms. We do not accept CSR's via email.<br />&nbsp;</div>
+        <div class="num">5. Enter a certificate name and the certificate strength</div>
+        <div>At this point you will decide what encryption strength your private Key and CSR will be set at. It is advised to choose a 1024-bit key size. Please note that you can choose a larger key size although some browsers may have difficulty making a session with a bigger key size. Do not check the option ‘Select cryptographic service provider (CSP) for this certificate’.<br /><br />You have now created a public/private key pair. The private key is stored locally on your machine in the MMC, and is used for decryption. The public portion is sent to thawte in the form of a Certificate Signing Request (CSR), and will be used by your users to encrypt the data they send to your site.<br /><br />You will now create a Certificate Signing Request (CSR). This information will be displayed on your certificate, and identifies the owner of the key to users. The CSR is only used to request the certificate. Certain characters must be excluded from your CSR fields, or your certificate may not work.<br />&nbsp;</div>
+        <div class="num">6. Enter your Organization Information</div>
+        <div>You should enter the company name as it appears on your official company registration documents. The organization unit is optional but IIS 6.0 makes this field compulsory therefore please specify an organization unit.<br />&nbsp;</div>
+        <div class="num">7. Enter your common name</div>
+        <div>The term "common name" is X.509 speak for the name that distinguishes the certificate best, and ties it to your Organization. Enter your exact host and domain name that you wish to secure. Example: If you wish to secure www.mydomain.com, then you will need to enter the exact host (www) and domain name (mydomain.com) in this field. If you enter mydomain.com then the certificate issued to you will only work error free on https://mydomain.com. It will cause a certificate mismatch error when you or your users access the domain via https:// www.mydomain.com.<br />&nbsp;</div>
+        <div class="num">8. Enter the geographical details of your Organization</div>
+        <div>Enter your country, state or province and locality or city.<br />&nbsp;</div>
+        <div class="num">9. Choose a filename to save the request to</div>
+        <div>Enter the file name for the certificate request (CSR) and the location of where you would like to save the file (we recommend you click the ‘browse’ button and select a location to save the CSR file to). Then click "Next”.<br />&nbsp;</div>
+        <div class="num">10. Confirm your request details</div>
+        <div>The next page will display the summary of the certificate request.<br />&nbsp;</div>
+        <div class="num">11. Finish and exit the IIS Certificate Wizard</div>
+        <div>Click on 'Finish' to complete the "Web Server Certificate wizard".<br />&nbsp;</div>
+        <div class="num">12. Backup your private key</div>
+        <div>If you create a new CSR, or new Key for the same web site, you will overwrite the ones you used to request your certificate. If that happens, you cannot use the certificate we issue you and will need to request a reissue. Please ensure you have a backup of your private key in case it is lost or overwritten.<br /><br />Please backup your private key using the instructions at the following <a href="#faq2">link</a><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div><a name="faq2"><h1>How do I backup a private key on Microsoft IIS 6.0?</h1></a></div>
+        <div>By far the most common problem users have when going through this process is related to private keys. If you lose or cannot access a private key or it has been over-written, the certificate will be rendered useless and you will need to reissue your certificate. (reissues are free).<br /><br />Please note, that the Certificate Authority does not come into contact with the private key file, nor the password (pass phrase) thereof. To ensure this never happens, it is advised that a backup of the private key file is made and that a note is made of the password (pass phrase).<br /><br />To backup a private key on Microsoft IIS 6.0 follow these instructions:<br />&nbsp;</div>
+        <div class="num">1. Open the MMC (Microsoft Management Console)</div>
+        <div>From your server, go to Start > Run and enter mmc in the text box. Click on the ‘OK’ button.<br />&nbsp;</div>
+        <div class="num">2. Add the certificate snap-in</div>
+        <div>a. From the Microsoft Management Console (MMC) menu bar, select Console > Add/Remove Snap-in.<br />b. Click on the ‘Add’ button. Select ‘Certificates’ from the list of snap-ins and then click on the ‘Add’ button.<br />c. Select the Computer account option. Click on the ‘Next’ button.<br />d. Select the Local computer (the computer this console is running on) option. Click on the ‘Finish’ button.<br />e. Click on the ‘Close’ button on the snap-in list window. Click on the ‘OK’ button on the Add/Remove Snap-in window.<br />&nbsp;</div>
+        <div class="num">3. Backup the private key</div>
+        <div>a. Click on Certificates from the left pane.<br />b. Look for a folder called ‘REQUEST’ or ‘Certificate Enrollment Requests’ > Certificates<br />c. Select the private key that you wish to backup. Right click on the file and choose > All Tasks > Export…<br />d. The certificate export wizard will start, please click ‘Next’ to continue. In the next window select ‘Yes, export the private key’ and click ‘Next’.<br />e. Leave the default settings selected and click ‘Next’.<br />f. Set a password on the private key backup file and click ‘Next’.<br />g. Click on ‘Browse’ and select a location where you want to save the private key Backup file to and then click ‘Next’ to continue. By default the file will be saved with a .pfx extension.<br />h. Click ‘Finish’ to complete the export process.<br />You will get a message that the export was successful. Please copy the backup file.<br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div><a name="faq3"><h1>How do I backup the certificate with the private key file attached on Microsoft IIS 6.0?</h1></a></div>
+        <div class="num">1. Open your MMC and expand the Certificates Console Tree</div>
+        <div>If you do not have the mmc saved then you will need to open a new mmc: Start > Run > type 'MMC' and hit enter. Then go into the Console Tab > 'File' > 'Add/Remove Snap-in'. Click on 'Add' > Click on 'Certificates' and click on 'Add'. Choose 'Computer Account'. Choose 'Local Computer'. Close the 'Add Standalone Snap-in' window. Click on 'OK' at the 'Add/Remove Snap-in' window.<br />&nbsp;</div>
+        <div class="num">2. Look for a folder called 'Personal' > 'Certificates'</div>
+        <div>Select the Certificate that you wish to back up.<br />&nbsp;</div>
+        <div class="num">3. Right-click on the file and choose > ALL TASKS > Export..</div>
+        <div>The "Certificate Export Wizard" will start up. Click on 'Ok'.<br />&nbsp;</div>
+        <div class="num">4. Choose "Yes, export the private key"</div>
+        <div><br />&nbsp;</div>
+        <div class="num">5. Choose "Include all certificates in the certification path if possible"</div>
+        <div><br />&nbsp;</div>
+        <div class="num">6. Disable "Enable Strong protection (requires IE 5.0, NT 4.0 SP4 or above)"</div>
+        <div><br />&nbsp;</div>
+        <div class="num">7. Disable "Delete the private key if the export is successful" Click on 'Next'.</div>
+        <div>Set a password to protect the export of the Certificate with the Private Key file attached. Click on 'Next'  (note that you will need this password when importing the certificate from the resulting backup file).<br />&nbsp;</div>
+        <div class="num">8. Choose to save the file to a set location</div>
+        <div>Browse to where you would like to save the file, enter the file name of the backup file in the 'File Name' box, and click 'Save'.<br /><br />Click on 'Next'.<br /><br />The file is given a *.pfx file-name extension, then click 'Finish'. You should receive a message that states "The export was successful" when the export has been completed. Click 'Ok'.<br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div><a name="faq4"><h1>How do I install the certificate on Microsoft IIS 6.0?</h1></a></div>
+        <div><p>Certificate installation Instructions</p></div>
+        <div class="num">1. Start the certificate installation process</div>
+        <div>Under Administrative Tools, open the Internet Services Manager. Then open up the properties window for the website you wish to request the certificate for. Right-clicking on the particular website will open up its properties.<br />&nbsp;</div>
+        <div class="num">2. Click the Directory Security tab</div>
+        <div>Click the Directory Security tab and then click on the "Server Certificate" button in the Secure communications section. This will start the Web Site Certificate Wizard.<br />&nbsp;</div>
+        <div class="num">3. Select to “Process the pending request and Install the certificate.”</div>
+        <div>From the Web Site Certificate Wizard, select the "Process the Pending Request and Install the Certificate " option.<br />&nbsp;</div>
+        <div class="num">4. Select the certificate file to install</div>
+        <div>Type in the location of the certificate response file (you may also browse to the file), and then click Next. (save the certificate in a notepad file with a .cer extension)<br />&nbsp;</div>
+        <div class="num">5. Specify the SSL port number </div>
+        <div>Specify SSL port 443 which is the default secure port.<br />&nbsp;</div>
+        <div class="num">6. Confirm the certificate details</div>
+        <div>Read the summary screen to be sure that you are processing the correct certificate, and then click Next.<br />&nbsp;</div>
+        <div class="num">7. Click "Finish" to complete the installation process</div>
+        <div>You will see a confirmation screen. When you have read this information, click “Finish”.<br />&nbsp;</div>
+        <div class="num">8. Setup the Server</div>
+        <div>Make sure that a unique IP address is assigned.<br /><br />You now have SSL enabled. You may want to test the web site to ensure that everything is working correctly. Be sure to use https:// when you test connectivity to the site.<br /><br />Once your certificate is installed, we strongly advise you to make a backup of your certificate with its private key. The instructions to backup your certificate are available at the following this <a href="#faq3">solution</a><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+        <div class="num"></div>
+        <div><br />&nbsp;</div>
+	</div>
+</div>
+</body>
+</html>

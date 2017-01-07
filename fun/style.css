@@ -1,0 +1,33 @@
+/* This controls overall page formatting */
+*{margin:0;padding:0;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;}
+body{padding-top:30px;font-size:11px;}
+
+/* This controls the formatting of the search box */
+#search{margin:7em auto;background:url(./login-bkg-tile.jpg) center top no-repeat;width:380px;}
+#search h1{text-indent:-9999px;overflow:hidden;padding-bottom:15px;display:block;background:transparent;height:122px;width:380px;}
+#search form{border:none;margin-left:8px;padding:16px 16px 40px 16px;background-color:transparent;font-weight:normal;}
+#search form p{}
+#search form label{color:#fff;font-size:13px;}
+#search form .input{border:1px solid #e5e5e5;margin:2px 6px 16px 0px;padding:3px;width:97%;background:#c0c0c0;font-size:18px;color:#090;}
+#search form .button-primary{border:1px solid #e5e5e5;border-radius:11px;margin:-3px 11px 0px 0px;padding:3px 10px;float:right;background:url(./button-grad.png) repeat-x;font-size:12px;font-weight:bold;color:#fff;text-decoration:none;text-shadow:rgba(0,0,0,0.3) 0 -1px 0;cursor:pointer;}
+#search form .button-primary:active{}
+#search form .button-primary:hover{border-color:#900;color:#c0c0c0;}
+
+/* This controls stying of rules though currently we have none */
+#rules{background:url(./login-bkg-bottom.gif) center bottom no-repeat;width:380px;height:45px;text-indent:26px;margin:0px;padding:0px;text-shadow:rgba(255,255,255,1) 0 1px 0;}
+
+/* This controls the information bar */
+#linkbar{border-bottom:1px solid #000;position:absolute;top:0;left:0;background:#d7d7d7;height:30px;width:100%;display:none;}
+#linkbar a{padding:8px 0 0 15px;color:#09C;text-decoration:none;display:inline-block;}
+#lbtoggle{border:none;position:absolute;top:0;right:0;height:30px;width:30px;}
+#lbtoggle img{padding:8px 10px 0 0;color:#09C;text-decoration:none;display:inline-block;float:right;}
+
+/* This controls the headline feeds */
+#feeds{margin:7em auto;width:720px;}
+#feeds h1{}
+#feeds h1 a{font-size:11px;}
+#feeds p{display:none;}
+
+/* Support Hackers */
+#support{position:absolute;bottom:10px;left:10px;height:40px;width:30px;display:block;font-family:"Courier New", Courier, monospace;font-size:9px;cursor:default;}
+#support a{font-family:"Courier New", Courier, monospace;font-size:9px;color:#000;text-decoration:none;cursor:default;}

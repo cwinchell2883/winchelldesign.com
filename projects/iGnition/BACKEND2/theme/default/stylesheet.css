@@ -1,0 +1,284 @@
+﻿/*
+Pro Clan Manager is a website manager for multiplayer game teams. Pro Clan manager was designed and built by Andrew Fenn.
+Copyright (C) 2002 Andrew Fenn
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+*/
+/* CLASS LEVEL STYLES */
+
+
+
+.page /* The whole page */
+{
+	left: 0;
+	top: 0;
+	min-height: 500px;
+/*IE min-height hack */
+	height: auto !important;
+	height: 500px;
+/*---End IE Hack----*/
+}
+
+.main /* Used to hold the Navigators and the content */
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: inherit !important;
+	min-height: 500px;
+/*IE min-height hack */
+	height: auto !important;
+	height: 500px;
+/*---End IE Hack----*/
+}
+
+.content /* This contains the content_box areas */
+{
+	min-height: inherit !important;
+	min-height: 500px;
+	/*IE min-height hack */
+	height: auto !important;
+	height: 500px;
+	/*---End IE Hack----*/
+	width: 633px;
+	position: relative;
+	background: url(gfx/contentBG.png) repeat-y;
+	margin-left: 151px;
+	top: 0;
+	padding-left: 6px;
+	padding-right: 11px;
+	color: #ffffff; /* added this from html, body */
+	font-size: 11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+.content_box_top /* Stuff to make the window in the content box appear */
+{
+	width: auto !important;
+	width: 616px; /* IE hack to make the width right */
+	height: 3px;
+	border:0px;
+	margin-top: 3px;
+	padding: 0px;
+	margin-left: 9px;
+	margin-bottom: 0px !important;
+	margin-bottom: -10px;
+	background-image: url(gfx/content_bar_top.png);
+	background-repeat: no-repeat;
+	vertical-align: bottom;
+}
+
+.content_box h3
+{
+		border:0px;
+		margin:0px;
+		font-size: 14px;
+		padding-top: 4px;
+}
+
+.content_box /* Stuff to make the window in the content box appear */
+{
+	width: auto !important;
+	width: 616px; /* IE hack to make the width right */
+	height: auto;
+	margin-top: 0px;
+	margin-left: 9px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+	margin-right: 7px;
+	padding-right: 25px;
+	background-image: url(gfx/content_bar.png);
+	background-repeat: repeat-y;
+	/* background-color: #a6a6a6; */
+	vertical-align: bottom;
+	font-weight: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align:justify;
+	color: #ffffff;
+}
+
+.content_box_bottom /* Stuff to make the window in the content box appear */
+{
+	width: auto !important;
+	width: 616px; /* IE hack to make the width right */
+	height: 3px;
+	border: 0px;
+	margin-top: 0px;
+	margin-left: 9px;
+	padding-bottom: 5px !important;
+	background-image: url(gfx/content_bar_bottom.png);
+	background-repeat: no-repeat;
+	vertical-align: top;
+}
+
+.leftNav /* contained in main - The menu navigation bar */
+{
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 150px;
+	background: url(gfx/navBorder.png) repeat-y;
+}
+
+.leftImage /* This keeps the break images in the menu from messing up */
+{
+	position: absolute;
+	left:0px;
+}
+
+.leftBox /* contained in leftNav - This keeps the menu nicly aligned */
+{
+	padding-left: 19px;
+	margin-bottom: 10px;
+	/* added this from html, body */
+	background-repeat: repeat-x;
+	font-size: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: #586963;
+	font-weight: bold;
+}
+
+.userarea
+{
+ 	position: relative;
+ 	top: 2px;
+ 	left: 2px;
+}
+
+.nav a  /* This makes the links in the menu indent */
+{
+	padding-left: 15px;
+}
+
+.nav input
+{
+	border-left: 7px;
+}
+
+.login /* Used for the login text in the box on the main site */
+{
+	width: 100px;
+	height: 15px;
+	border: 0px;
+	padding: 0px; /* Some weird shadowing effect in Firefox when padding isn't set to 0 */
+	background-repeat: repeat-x;
+	font-size: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: #586963;
+	font-weight: bold;
+	background-image: url(gfx/text_middle.png);
+	margin-top: 3px;
+}
+
+.textbox /* Used for the login text in the box on the main site */
+{
+	border: 0px;
+	padding: 0px; /* Some weird shadowing effect in Firefox when padding isn't set to 0 */
+	background-repeat: repeat;
+	font-size: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: #000000;
+	font-weight: bold;
+	background-image: url(gfx/textbox.png);
+	margin-top: 3px;
+}
+
+.loginimg /* Used to align the images up with the textboxes */
+{
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+.title /* The title bar at the top of a page in the content area */
+{
+	width: 616px;
+	height: 21px;
+	margin-top: 4px;
+	margin-left: 9px;
+	padding-left: 15px;
+	padding-top: 3px;
+	background-image: url(gfx/title_bar.png);
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+}
+
+.link /* This changes the colour of the links inside the content box */
+{
+	color: #8f91fe; /* #4ec988*/
+}
+
+/* ID LEVEL STYLES*/
+
+#foot /*Placed at the absolute bottom of the main element*/
+{
+	position: relative;
+	bottom: 0px;
+	padding: 0px;
+	border:0px;
+}
+
+/* TAG LEVEL STYLES*/
+a
+{
+	color: #000000;
+}
+a:active, a:hover, a:focus
+{
+	color: Blue;
+}
+
+.poweredby
+{
+	float:right; 
+	width: 200px; 
+	font-size:9px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding-top: 13px;
+}
+
+.poweredby a { text-decoration:none; }
+
+.pager
+{
+	margin-top: 40px;
+	float:left;
+	text-align:center;
+	position:relative; 
+	margin-left: 3px;
+	min-width: 15px; 
+	width:auto; 
+	height:15px; 
+	background: #a8aeae; 
+	border: 1px; 
+	
+}
+
+.pager_active
+{
+	margin-top: 40px;
+	float:left;	
+	text-align:center;
+	position:relative; 
+	margin-left: 3px; 
+	min-width: 15px; 
+	width:auto; 
+	height:15px; 
+	background: #ffffff;
+	color: #000000;
+	border: 1px; 
+}

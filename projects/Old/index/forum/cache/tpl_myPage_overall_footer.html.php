@@ -1,0 +1,21 @@
+<div id="page-footer">
+	
+<!--
+	We request, if you must rip off this source code, that you retain the full
+  copyright notice below including the link to www.winchelldesign.com.  This
+  not only gives respect to the large amount of time given freely by the
+  developers	but also helps build interest, traffic and potential customers
+  of Winchelldesign.com.  Also please note that this page is possible due to
+  the phpbb developers group.  If you (honestly) cannot retain my copyright,
+  then we ask you at least leave in place the "Powered by phpBB" line.
+
+	Winchell Design : 2008
+//-->
+
+</div>
+	<div class="copyright">Copyright by <a href="http://www.winchelldesign.com/">Winchell Design</a> &copy; 2008<br />Powered by phpBB
+		<?php if ($this->_rootref['DEBUG_OUTPUT']) {  ?><br /><?php echo (isset($this->_rootref['DEBUG_OUTPUT'])) ? $this->_rootref['DEBUG_OUTPUT'] : ''; } ?>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+A:link { text-decoration:none; color: #888888 }
+A:visited { text-decoration:none; color: #888888 }
+A:active { text-decoration:underline; color: #FFCC00 }
+A:hover { text-decoration:underline; color: #FADC82 }
+.content { font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 9pt; line-height:12px; color:white }
+.mstheme { nav-banner-image: url(./img/z5.gif);	separator-image: url(./img/hr.gif);	list-image-1: url(./img/bullet1.gif);	list-image-2: url(./img/bullet2.gif);	list-image-3: url(./img/bullet3.gif);	navbutton-horiz-pushed: url(./img/nav_s.gif);	navbutton-horiz-normal: url(./img/nav.gif);	navbutton-horiz-hovered: url(./img/nav_h.gif);	navbutton-vert-pushed: url(./img/nav_s.gif); navbutton-vert-normal: url(./img/nav.gif); navbutton-vert-hovered: url(./img/nav_h.gif); navbutton-home-normal: url(./img/blhomes.gif); navbutton-home-hovered: url(./img/blhomeh.gif); navbutton-home-pushed: url(./img/blhomep.gif); navbutton-up-normal: url(./img/blups.gif); navbutton-up-hovered: url(./img/bluph.gif); navbutton-up-pushed: url(./img/blupp.gif); navbutton-prev-normal: url(./img/blprevs.gif);	navbutton-prev-hovered: url(./img/blprevh.gif);	navbutton-prev-pushed: url(./img/blprevp.gif); navbutton-next-normal: url(./img/blnexts.gif);	navbutton-next-hovered: url(./img/blnexth.gif);	navbutton-next-pushed: url(./img/blnextp.gif); navbutton-background-color: rgb(255,255,255); top-bar-button: url(./img/88.gif) }
+.mstheme-topbar-font { font-family: verdana, Arial, Helvetica; font-size: 1; color: rgb(0,0,0) }
+.mstheme-bannertxt { font-family: Verdana, Arial, Helvetica; font-size: 3; font-weight: bold;	text-align: left;	color: rgb(255,255,255) }
+.mstheme-horiz-navtxt {	font-family: verdana, Arial, Helvetica;	font-size: 1;	color: rgb(0,0,0) }
+.mstheme-vert-navtxt { font-family: verdana, Arial, Helvetica; font-size: 1; color: rgb(0,0,0) }
+.mstheme-navtxthome {	font-family: arial, Arial, Helvetica;	font-size: 1;	color: rgb(0,0,204) }
+.mstheme-navtxtup {	font-family: arial, Arial, Helvetica; font-size: 1;	color: rgb(0,0,204) }
+.mstheme-navtxtprev {	font-family: arial, Arial, Helvetica;	font-size: 1;	color: rgb(0,0,204) }
+.mstheme-navtxtnext {	font-family: arial, Arial, Helvetica; font-size: 1; color: rgb(0,0,204) }
+body { font-family: Verdana, Arial, Helvetica; color: rgb(255,255,255);	background-color: rgb(74,98,126); background-image: url(./img/bg.gif) }
+table { table-border-color-light: rgb(255,255,255);	table-border-color-dark: rgb(255,255,255) }
+a:link { color: rgb(136,136,136) }
+a:visited { color: rgb(136,136,136) }
+a:active { color: rgb(255,204,0) }
+h1 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+h2 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+h3 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+h4 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+h5 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+h6 { color: rgb(0,0,0); font-family: arial, Arial, Helvetica }
+         
+ul { list-style-image: url(./img/bullet1.gif) }
+ul ul { list-style-image: url(./img/bullet2.gif) }
+ul ul ul { list-style-image: url(./img/bullet3.gif) }

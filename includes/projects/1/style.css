@@ -1,0 +1,242 @@
+/* CSS Document */
+
+/* Body */
+a:link {
+	color: #3300FF;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #3300FF;
+	text-decoration: underline;
+}
+
+/* AUP */
+#aup {
+	font-family: "Courier New", Courier, monospace;
+	margin: 0;
+	text-align: center;
+}
+
+#aup #legend {
+	font-weight: bold;
+	font-size: 24px;
+	height: 40px;
+}
+
+#aup iframe {
+	width: 85%;
+	height: 100px;
+}
+
+.head {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.info {
+	text-align: justify;
+	font-size: 11px;
+}
+
+/* Navigation */
+#menu {
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+}
+
+#menu ul {
+}
+
+#menu li {
+	display: inline;
+}
+
+/* Specials */
+#specials {
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	float: left;
+	width: 65%;
+	text-align: justify
+}
+
+#specials caption {
+  width: 180px;
+  border: 1px solid #CCCCCC;
+	background-image: url(header_bg.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#specials th {
+	text-indent: 10px;
+}
+
+#specials td {
+  border: 1px solid #DDDDDD;
+  color: #555555;
+  padding: 3px;
+  text-align: justify;
+	background-color: #F1F1F1;
+}
+
+/* Calendar */
+#calendar {
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666666;
+}
+
+#calendar caption {
+  width: 180px;
+  border: 1px solid #CCCCCC;
+	background-image: url(header_bg.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#calendar th {
+  padding: 5px;
+	text-align: center;
+}
+
+#calendar td {
+  border: 1px solid #DDDDDD;
+  color: #555555;
+  padding: 3px;
+  text-align: center;
+	background-color: #F1F1F1;
+}
+
+#calendar td.today {
+	background-image: url(hbg.gif);
+	background-repeat: repeat-x;
+ 	color: #FFFFFF;
+  font-weight: bold;
+}
+
+#calendar td.inform {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#calendar td.pad {
+	background-color: #FFFFFF;
+	border: none;
+}
+
+#calendar td.prev {
+	background-color: #FFFFFF;
+	border: none;
+	text-align: left;
+}
+
+#calendar td.next {
+	background-color: #FFFFFF;
+	border: none;
+	text-align: right;
+}
+
+/* Flavor of the Day */
+#fod {
+	float: right;
+	width: 180px;
+	height: 233px;
+	background-image: url(custard.png);
+	background-repeat: no-repeat;
+}
+
+/* Have You Tried */
+#hut {
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	float: left;
+	width: 65%;
+	text-align: justify
+}
+
+#hut caption {
+  width: 180px;
+  border: 1px solid #CCCCCC;
+	background-image: url(header_bg.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#hut th {
+	text-indent: 10px;
+}
+
+#hut td {
+  border: 1px solid #DDDDDD;
+  color: #555555;
+  padding: 5px;
+  text-align: justify;
+	background-color: #F1F1F1;
+}
+
+#hut td.pad {
+	height: 5px;
+	background-color: #FFFFFF;
+	border: none;
+}
+
+/* Did You Know */
+#dyk {
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	float: left;
+	width: 65%;
+	text-align: justify
+}
+
+#dyk caption {
+  width: 180px;
+  border: 1px solid #CCCCCC;
+	background-image: url(header_bg.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#dyk th {
+	text-indent: 10px;
+}
+
+#dyk td {
+  border: 1px solid #DDDDDD;
+  color: #555555;
+  padding: 5px;
+  text-align: justify;
+	background-color: #F1F1F1;
+}
+
+/* Coupon */
+#coupon {
+  border: 1px dashed #666666;
+	float: right;
+	width: 180px;
+	height: 233px;
+	background-image: url();
+	background-repeat: no-repeat;
+}
+
+#coupon p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	text-align: center;
+	vertical-align: middlel;
+}

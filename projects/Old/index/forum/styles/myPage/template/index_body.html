@@ -1,0 +1,36 @@
+<!-- INCLUDE overall_header.html -->
+
+<table width="100%" border="0" cellpadding="0" cellspacing="5">
+  <tr>
+    <td height="70" align="right" valign="middle"><font size="2px">
+    <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+			<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+				<h6>If you need to register &rarr; <a href="{U_REGISTER}">{L_REGISTER}</a></h6>
+				<fieldset class="quick-login">
+					<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" value="{L_USERNAME}" />  
+					<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" value="{L_PASSWORD}" />
+					<input type="submit" name="login" value="{L_LOGIN}" class="button2" />
+				</fieldset>
+			</form>
+		<!-- ENDIF -->
+    <!-- IF S_USER_LOGGED_IN and not S_IS_BOT -->
+			<li class="icon-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></li>
+		<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="150" align="center" valign="center"><img src="http://www.winchelldesign.com/index/img/coming_soon.gif"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top"><font style="font-family:Arial;font-size:16px;font-weight:bold;text-decoration:underline;">Website Update</font></td>
+  </tr>
+  <tr>
+    <td height="300" align="center">&nbsp;</td>
+  </tr>
+</table>
+
+<!-- INCLUDE overall_footer.html -->

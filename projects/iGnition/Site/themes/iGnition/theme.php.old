@@ -1,0 +1,138 @@
+<?php
+if (!defined("IN_FUSION")) { die("Access Denied"); }
+require_once THEME."theme_functions_include.php";
+define("THEME_BULLET", "<img src='".THEME."images/arrow1.jpg' alt='>' />");
+
+$theme_width = '1042';
+
+function render_page($license=false)
+{
+	global $theme_width, $locale, $settings, $main_style;
+// Add Some Javascript:
+	echo "<script type='text/JavaScript'>\n<!--\n";
+	echo "function MM_swapImgRestore() { var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc; }\n";
+	echo "function MM_preloadImages() { var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array(); var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++) if (a[i].indexOf('#')!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}}\n";
+	echo "function MM_findObj(n, d) { var p,i,x;  if(!d) d=document; if((p=n.indexOf('?'))>0&&parent.frames.length){ d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);} if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n]; for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); if(!x && d.getElementById) x=d.getElementById(n); return x;}\n";
+	echo "function MM_swapImage() { var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3) if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}}\n";
+	echo "//-->\n</script>\n\n";
+
+// Header:	
+	echo "<body onload=\"MM_preloadImages('themes/iGnition/images/homehover.jpg','themes/iGnition/images/forumhover.jpg','themes/iGnition/images/rosterhover.jpg','themes/iGnition/images/matcheshover.jpg','themes/iGnition/images/downloadshover.jpg','themes/iGnition/images/mediahover.jpg','themes/iGnition/images/galleryhover.jpg','themes/iGnition/images/sponsorshover.jpg','themes/iGnition/images/linkagehover.jpg')\">\n";
+	echo "<div id='wrapper'>\n<div class='container'>\n";
+	echo "<table border='0' cellspacing='0' cellpadding='0'>\n<tr>\n";
+	echo "<td class='top'>";
+	echo "<form action='#' method='post' style='margin: 0px; padding: 0px;'>\n<input type='text' /> &nbsp; <input type='password' /> &nbsp; <input type='submit' value='Login' />\n</form>\n</td>\n</tr>\n</table>\n";
+	echo "<div class='undertop'></div>\n";
+	echo "<div class='header'></div>\n";
+
+// Menu Bar:
+	echo "<div class='navigation'>";
+	echo "<img src='themes/iGnition/images/left.jpg' width='56' height='33' />";
+	echo "<a href='index.php' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image30','','themes/iGnition/images/homehover.jpg',1)\"><img src='themes/iGnition/images/home.jpg' width='83' height='33' name='Image30' id='Image30' /></a>";
+	echo "<a href='forum/index.php' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image31','','themes/iGnition/images/forumhover.jpg',1)\"><img src='themes/iGnition/images/forum.jpg' width='108' height='33' name='Image31' id='Image31' /></a>";
+	echo "<a href='#' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image32','','themes/iGnition/images/rosterhover.jpg',1)\"><img src='themes/iGnition/images/roster.jpg' width='93' height='33' name='Image32' id='Image32' /></a>";
+	echo "<a href='#' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image33','','themes/iGnition/images/matcheshover.jpg',1)\"><img src='themes/iGnition/images/matches.jpg' width='114' height='33' name='Image33' id='Image33' /></a>";
+	echo "<a href='downloads.php' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image34','','themes/iGnition/images/downloadshover.jpg',1)\"><img src='themes/iGnition/images/downloads.jpg' width='116' height='33' name='Image34' id='Image34' /></a>";
+	echo "<a href='articles.php' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image35','','themes/iGnition/images/mediahover.jpg',1)\"><img src='themes/iGnition/images/media.jpg' width='102' height='33' name='Image35' id='Image35' /></a>";
+	echo "<a href='#' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image36','','themes/iGnition/images/galleryhover.jpg',1)\"><img src='themes/iGnition/images/gallery.jpg' width='102' height='33' name='Image36' id='Image36' /></a>";
+	echo "<a href='#' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image37','','themes/iGnition/images/sponsorshover.jpg',1)\"><img src='themes/iGnition/images/sponsors.jpg' width='114' height='33' name='Image37' id='Image37' /></a>";
+	echo "<a href='weblinks.php' onmouseout='MM_swapImgRestore()' onmouseover=\"MM_swapImage('Image38','','themes/iGnition/images/linkagehover.jpg',1)\"><img src='themes/iGnition/images/linkage.jpg' width='102' height='33' name='Image38' id='Image38' /></a>";
+	echo "<img src='themes/iGnition/images/right.jpg' width='52' height='33' />";
+	echo "</div>\n";
+	echo "<div class='divider'></div>\n\n";
+	echo "<table width='100%' border='1'>\n<tr>\n<td>\n";
+
+// Content
+	echo $main_style;
+// Footer:
+	echo "</td>\n</tr>\n</table>\n";
+	echo "<div class='spacer'></div>";
+	echo "<table>\n<tr>\n";
+	echo "<td class='valign3 footer'><font class='copy'>".stripslashes($settings['footer'])."</font>".sprintf($locale['global_172'], substr((get_microtime() - START_TIME),0,4)).", ".showcounter()."</td>\n";
+	echo "</tr>\n</table>\n";
+}
+
+function render_news($subject, $news, $info) {
+	
+	echo "<table cellpadding='0' cellspacing='0' width='100%'>\n<tr>\n";
+	echo "<td class='capmain-left'></td>\n";
+	echo "<td class='capmain'>".$subject."</td>\n";
+	echo "<td class='capmain-right'></td>\n";
+	echo "</tr>\n</table>\n";
+	echo "<table width='100%' cellpadding='0' cellspacing='0' class='spacer'>\n<tr>\n";
+	echo "<td class='main-body middle-border'>".$news."</td>\n";
+	echo "</tr>\n<tr>\n";
+	echo "<td align='center' class='news-footer middle-border'>\n";
+	echo newsposter($info," &middot;").newsopts($info,"&middot;").itemoptions("N",$info['news_id']);
+	echo "</td>\n";
+	echo "</tr><tr>\n";
+	echo "<td style='height:5px;background-color:#f6a504;'></td>\n";
+	echo "</tr>\n</table>\n";
+
+}
+
+function render_article($subject, $article, $info) {
+	
+	echo "<table width='100%' cellpadding='0' cellspacing='0'>\n<tr>\n";
+	echo "<td class='capmain-left'></td>\n";
+	echo "<td class='capmain'>".$subject."</td>\n";
+	echo "<td class='capmain-right'></td>\n";
+	echo "</tr>\n</table>\n";
+	echo "<table width='100%' cellpadding='0' cellspacing='0' class='spacer'>\n<tr>\n";
+	echo "<td class='main-body middle-border'>".($info['article_breaks'] == "y" ? nl2br($article) : $article)."</td>\n";
+	echo "</tr>\n<tr>\n";
+	echo "<td align='center' class='news-footer'>\n";
+	echo articleposter($info," &middot;").articleopts($info,"&middot;").itemoptions("A",$info['article_id']);
+	echo "</td>\n</tr>\n</table>\n";
+
+}
+
+function opentable($title) {
+
+	echo "<table cellpadding='0' cellspacing='0' width='100%'>\n<tr>\n";
+	echo "<td class='capmain-left'></td>\n";
+	echo "<td class='capmain'>".$title."</td>\n";
+	echo "<td class='capmain-right'></td>\n";
+	echo "</tr>\n</table>\n";
+	echo "<table cellpadding='0' cellspacing='0' width='100%' class='spacer'>\n<tr>\n";
+	echo "<td class='main-body'>\n";
+
+}
+
+function closetable() {
+
+	echo "</td>\n";
+	echo "</tr><tr>\n";
+	echo "<td style='height:5px;background-color:#f6a504;'></td>\n";
+	echo "</tr>\n</table>\n";
+
+}
+
+function openside($title, $collapse = false, $state = "on") {
+	
+	global $panel_collapse; $panel_collapse = $collapse;
+	
+	echo "<table cellpadding='0' cellspacing='0' width='100%'>\n<tr>\n";
+	echo "<td class='scapmain-left'></td>\n";
+	echo "<td class='scapmain'>$title</td>\n";
+	if ($collapse == true) {
+		$boxname = str_replace(" ", "", $title);
+		echo "<td class='scapmain' align='right'>".panelbutton($state, $boxname)."</td>\n";
+	}
+	echo "<td class='scapmain-right'></td>\n";
+	echo "</tr>\n</table>\n";
+	echo "<table cellpadding='0' cellspacing='0' width='100%' class='spacer'>\n<tr>\n";
+	echo "<td class='side-body'>\n";	
+	if ($collapse == true) { echo panelstate($state, $boxname); }
+
+}
+
+function closeside() {
+
+	global $panel_collapse;
+
+	if ($panel_collapse == true) { echo "</div>\n"; }	
+	echo "</td>\n</tr>\n</table>\n";
+
+}
+?>
