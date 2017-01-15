@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Secured Area"
-AuthUserFile /home/cwinchell/.htpasswd
-Require valid-user
