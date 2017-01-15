@@ -1,6 +1,6 @@
 <?php
 
-echo "Hello World!"
+echo "Hello World!";
 
 // Compress Website
 if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
