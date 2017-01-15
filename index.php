@@ -1,8 +1,4 @@
 <?php
-
-/** Test Comment **/
-echo "Hello World!";
-
 // Compress Website
 if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
 {
