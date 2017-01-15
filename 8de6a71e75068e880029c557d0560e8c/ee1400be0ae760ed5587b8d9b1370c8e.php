@@ -227,7 +227,7 @@ $options = array(
     'date_format' => 'Y-m-d H:i:sP',
     'branch' => 'master',
     'remote' => 'origin',
-    'secret' => 'b27d1b9c731aa6a996f3c7cf5266841e5f19377f'
+    'secret' => ''
 );
 $deploy = new Deploy('/home/cwinchell/winchelldesign.com', $options);
 
