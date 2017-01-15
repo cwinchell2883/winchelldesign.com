@@ -146,7 +146,7 @@ $options = array(
     'branch' => 'master',
     'remote' => 'origin'
 );
-$deploy = new Deploy('~/winchelldesign.com', $options);
+$deploy = new Deploy('/home/cwinchell/winchelldesign.com', $options);
 
 
 /**
