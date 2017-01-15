@@ -109,8 +109,8 @@ class Deploy {
         try
         {
             // Make sure we're in the right directory
-            exec('cd '.$this->_directory, $output);
-            $this->log('Changing working directory... '.implode(' ', $output));
+            chdir($this->_directory);
+            $this->log('Changing working directory... ');
 
             // Discard any changes to tracked files since our last deploy
             exec('git reset --hard HEAD', $output);
