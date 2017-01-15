@@ -1,0 +1,167 @@
+/* CSS Document */
+
+body
+{
+	padding: 0px; 
+	margin: 0px; 
+	background: url(images/bg.gif) repeat-x #FFFFFF; 
+	font: 14px/17px Arial, Helvetica, sans-serif; 
+	color: #919191;
+}
+div, ul, h1, h2, h3, li, p, img, a
+{
+	margin: 0; 
+	padding: 0;
+}
+ul
+{
+	list-style-type: none;
+}
+
+/*-----------------main pan-----------------*/
+#mainPan
+{
+	width: 810px; 
+	position: relative; 
+	margin: 0 auto;
+}
+/*----------------header pan----------------*/
+#headerPan
+{
+	width: 810px;
+ 	height: 414px;
+}
+/*-----------------left pan-----------------*/
+#leftPan
+{
+	width: 2px;
+	height: 414px;
+	background: url(images/left_side.gif) no-repeat 0 0 #FFFFFF; 
+	color: #7F7F7F;
+	float: left;
+}
+/*----------------middle pan----------------*/
+#middlePan
+{
+	background-color: #FFFFFF; 
+	color: #333333;
+	width: 806px;
+	height: 414px;
+	float: left;
+}
+/*----------------right pan-----------------*/
+#rightPan
+{
+	width: 2px;
+	height: 414px;
+	float: left;
+	background: url(images/right_side.gif) no-repeat 0 0;
+}
+/*-------------------body1------------------*/
+#body1
+{
+	width: 810px;
+}
+/*----------------left body-----------------*/
+#leftBody
+{
+	background: url(images/left_body.gif) repeat-y right top;
+	width: 2px;
+	float: left;
+	height: 445px;
+}
+/*---------------middle body----------------*/
+#middleBody
+{
+	width: 806px;
+	float: left; 
+}
+/*----------------right body----------------*/
+#rightBody
+{
+	width:2px;
+	float:left;
+	height:445px;
+	background:url(images/right_body.gif) repeat-y left;
+}
+/*-----------------projects-----------------*/
+#project
+{
+	width: 100%;
+	height: 132px;
+	margin: 0 auto 0 auto;
+	float: left;
+	background: url(images/project_bg.gif) repeat-x #FFFFFF; color:#A68A33;
+}
+#project h2
+{
+	width: 218px;
+	margin: 24px auto 0 auto;
+	display: block;
+	background: url(images/project_h2.gif) no-repeat #FFFFFF;
+	font: 27px/30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #A68A33;
+	height: 30px;
+	font-weight: normal;
+	padding-left: 116px;
+}
+#project ul
+{
+	width: 330px;
+	height: 43px;
+	display: block;
+	margin: 0 auto 0 auto;
+	background-color: #FFFFFF; 
+	color: #362900;
+	text-align: center;
+	padding: 5px 2px 2px 2px;
+}
+#project ul li
+{
+	display: inline;
+	margin-right: 3px;
+}
+/*------------------footer------------------*/
+#footer
+{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	background: url(images/footer_bg.gif) repeat-x #979797;
+	float: left;
+	color: #FFFFFF;
+	font: 11px/16px Arial, Helvetica, sans-serif;
+}
+#footer ul
+{
+	width: 100%;
+	margin: 10px auto 0 auto;
+	display: block;
+	font-size: 0px;
+	text-align: center;
+	height: 20px;
+}
+#footer ul li
+{
+	display: inline;
+	height: 16px;
+	font: 13px/16px Arial, Helvetica, sans-serif;
+}
+#footer ul li a
+{
+	margin: 0 10px 0 10px; 
+	text-decoration: none;	
+	color: #FCFCFC; 
+	background-color: #979797;
+}
+#footer ul li a:hover
+{
+	text-decoration: underline;
+}
+#footer p
+{
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto 0 auto;	
+	display: block;
+}

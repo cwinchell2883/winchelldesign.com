@@ -1,0 +1,27 @@
+
+    iGaming CMS Installation Instructions
+    
+    Step 1
+
+    Upload the contents of the zip file somewhere onto your web server.
+
+
+
+    Step 2
+
+    Open your web browser and go to the /install directory where you uploaded iGaming.
+
+
+
+    Step 3
+
+    Follow the installation instructions and fill in all required fields.
+    
+
+
+    Support for iGaming CMS is available at:
+    http://forum.igamingcms.com/
+
+
+
+    Copyright (c) 2004-2005 Joshua Kimbrel

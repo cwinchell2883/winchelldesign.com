@@ -1,0 +1,6 @@
+<?php
+
+$plugin_filename = 'sample.php';
+$plugin_title = 'Sample Plugin';
+
+?>

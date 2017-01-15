@@ -1,0 +1,351 @@
+/* ===========================================
+   Default iGaming CMS Admin Stylesheet
+   =========================================== */
+
+.bar 
+{
+    color: #FFFFFF;
+    font-size: 8pt;
+    font-weight: bold;
+    padding-left: 4px;
+    background-image: url(../images/admin/gradient.jpg); 
+}
+
+.border
+{
+    background-color: #FFF; 
+    background-image: url(../images/admin/background.jpg);
+    background-repeat: repeat-x;
+}
+
+.date
+{
+    font-family: tahoma, verdana, arial;
+    font-size: 8pt;
+    background-color: #1D6AA0;
+    color: #FFFFFF;
+}
+
+.formlabel
+{
+    padding: 5px;
+    font-size: 8pt;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F1EFE2;
+}
+
+.formlabel2 
+{
+    padding: 5px;
+    font-size: 8pt;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F1EFE2;
+}
+
+.header
+{
+    text-align: right;
+    background: #FFFFFF;
+    border-bottom: 1px solid #00248c;
+    font-family: tahoma, verdana, arial;
+    font-size: 10pt;
+    color: #000000;
+    padding: 0px;
+}
+
+
+.header_right 
+{
+    font-family: tahoma, verdana, arial; 
+    padding: 10px; 
+    text-align: right; 
+    background-color: #FFF; 
+    border-bottom: 1px solid #00248C; 
+    font-size: 9pt; 
+    color: #000; 
+}
+
+.header_right a:link 
+{ 
+    color: #000000; 
+}
+
+.header_right a:visited 
+{ 
+    color: #000000; 
+}
+
+.header_right a:active 
+{ 
+    color: #000000; 
+}
+
+.header_right a:hover 
+{ 
+    color: #000000; 
+}
+
+.header_title 
+{ 
+    font-weight: bold; 
+}
+
+.hmenu 
+{
+    padding: 4px;
+    font-size: 8pt;
+    background-color: #ECECEC; 
+}
+
+.main 
+{
+    padding: 10px; 
+    background-color: #FFF; 
+    background-image: url(../images/admin/background.jpg);
+    background-repeat: repeat-x;
+}
+
+.submit 
+{ 
+    font-family: tahoma, verdana, arial; 
+    font-size: 8pt; 
+}
+
+.userbar 
+{ 
+    font-family: tahoma, verdana, arial; 
+    font-size: 8pt; 
+    background-color: #1D6AA0; 
+    color: #FFFFFF; 
+}
+
+.userbar a:link 
+{ 
+    color: #FFFFFF; 
+}
+
+.userbar a:hover 
+{ 
+    color: #FFF; 
+}
+
+.userbar a:visited 
+{ 
+    color: #FFF; 
+}
+
+.userbar a:active 
+{ 
+    color: #FFF; 
+}
+
+.vmenu 
+{ 
+    padding: 0px; 
+    font-size: small; 
+    line-height: 160%; 
+    background: #FFF; 
+}
+
+/* ====================================================
+   Global Link Style
+   ==================================================== */
+
+a:link 
+{ 
+    text-decoration: none; 
+    color: blue; 
+}
+
+a:visited 
+{ 
+    text-decoration: none; 
+    color: blue; 
+}
+
+a:active 
+{ 
+    text-decoration: none; 
+    color: blue; 
+}
+
+a:hover 
+{ 
+    text-decoration: underline; 
+    color: blue; 
+}
+
+.column_header 
+{
+    background-image: url(../images/admin/colheader.jpg);
+    font-size: 10px;
+    font-family: Tahoma; 
+}
+
+.optionmenu 
+{ 
+    font-size: 8pt; 
+}
+
+.optionmenu a:link 
+{ 
+    color: blue; 
+    text-decoration: none; 
+}
+
+.optionmenu a:active 
+{ 
+    color: blue; 
+    text-decoration: none; 
+}
+
+.optionmenu a:visited 
+{ 
+    color: blue; 
+    text-decoration: none; 
+}
+
+.optionmenu a:hover 
+{ 
+    color: blue; 
+    text-decoration: underline; 
+}
+
+body 
+{ 
+    background-color: #FFF; 
+    font-family: Tahoma,Verdana,Arial; 
+    font-size: 11px; 
+    margin: 0px; 
+}
+
+input 
+{ 
+    font-family: Tahoma,Verdana,Arial; 
+    font-size: 11px;  
+}
+
+select 
+{ 
+    font-family: Tahoma,Verdana,Arial; 
+    font-size: 11px;
+    padding: 1px; 
+}
+
+td 
+{ 
+    font-size: 11px; 
+}
+
+table.menu a 
+{ 
+    width: 160px; 
+    border: 0px; 
+    display: block;  
+}
+
+div.menu a 
+{ 
+    color: #3667B9; 
+    background: #FFFFFF; 
+    text-decoration: none; 
+    font-size: 11px; 
+    font-family: Tahoma, Verdana, sans-serif; 
+    padding: 5px; 
+}
+
+div.menu a:link 
+{ 
+    color: #3667B9;
+    background: #FFF;  
+}
+
+div.menu a:active 
+{ 
+    color: #3667B9; 
+    background: #FFF;  
+}
+
+div.menu a:visited 
+{ 
+    color: #3667B9; 
+    background: #FFF;  
+}
+
+div.menu a:hover 
+{ 
+    color: #3667B9; 
+    text-decoration: none;
+    background: #EAE6D3; 
+}
+table.menu a 
+{ 
+    width: 160px; 
+    border: 0px; 
+    display: block;  
+}
+
+td.menu a 
+{ 
+    display: block;
+    width: 150px;
+    color: #3667B9; 
+    background: #FFFFFF; 
+    text-decoration: none; 
+    font-size: 10px; 
+    font-family: Verdana, Arial, sans-serif; 
+    padding: 5px; 
+}
+
+td.menu a:link 
+{ 
+    color: #3667B9;
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    background: #FFF;  
+}
+
+td.menu a:active 
+{ 
+    color: #3667B9; 
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    background: #FFF;  
+}
+
+td.menu a:visited 
+{ 
+    color: #3667B9; 
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    background: #FFF;  
+}
+
+td.menu a:hover 
+{ 
+    color: #3667B9; 
+    border-left: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+    text-decoration: none;
+    background: #EAE6D3; 
+}
+
+hr 
+{ 
+    color: #1D6AA0; 
+    height: 1px; 
+}
+
+.modheader a 
+{ 
+    border-bottom: solid 1px #FFFFFF; 
+}
+
+.modheader a:hover 
+{ 
+    border-bottom: solid 1px #1D6AA0; 
+}

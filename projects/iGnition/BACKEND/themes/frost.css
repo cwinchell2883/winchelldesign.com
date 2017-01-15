@@ -1,0 +1,183 @@
+body {
+	padding: 0;
+	font-size: 8pt;
+	font-family: verdana, serif;
+	background-color: #000;
+	color: #fff;
+}
+
+
+/* Layout */
+#menu {
+	text-align: right;
+	width: 94%;
+	margin: 0 auto;
+	padding: 3px;
+}
+#header {
+	color: #00f;
+	width: 94%;
+	margin: 0 auto;
+	border: 1px solid #00f;
+	text-align: center;
+}
+#gutter {
+	float: left;
+	width: 3%;
+	height: 1px;
+}
+#col1 {
+	float: left;
+	width: 25%;
+	border-left: 1px solid #00f;
+	border-bottom: 1px solid #00f;
+}
+#col2 {
+	float: left;
+	width: 66.5%;
+	border-left: 1px solid #00f;
+	border-right: 1px solid #00f;
+	border-bottom: 1px solid #00f;
+}
+#col2 { padding: 1%; }
+#footer {
+	clear: both;
+	height: 50px;
+	text-align: right;
+	width: 94%;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.half {
+	float: left;
+	width: 45%;
+}
+
+/* NEWS */
+.news {
+	border-top: 3px double #00f;
+	background-color: #333;
+	margin: 2em 0;
+	padding: .5em;
+}
+.news_title {
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+}
+.news_date { font-style: italic; }
+.news_news {
+	line-height: 1.4em;
+	padding-bottom: 5em;
+}
+.news_submittedby { font-size: xx-small; }
+.news_name { font-size: x-small; }
+
+
+/* TABLES */
+#recruiters, {
+	padding: 0;
+	margin: 0 auto 10px auto;
+	width: 98%;
+	font-size: xx-small;
+	border-collapse: collapse;
+}
+#recruiters th { background-color: #008; }
+#recruiters th, #recruiters td { border: 1px solid #000; }
+#recruiters td { padding-left: 4px; }
+#members {
+	padding: 0;
+	margin: 0 auto;
+	border: 0;
+	width: 98%;
+	border-collapse: collapse;
+}
+#members th { background-color: #008; }
+#members th, #members td {
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+#board {
+	padding: 0;
+	margin: 10px auto;
+	border-collapse: collapse;
+	width: 98%;
+}
+#board td {
+	border: 1px solid #000;
+	padding: 2px 0 2px 4px;
+}
+#board th {
+	background-color: #008;
+	text-align: left;
+}
+#board .rep { text-align: center; }
+.altrow { background-color: #333; }
+
+
+/* MESSAGE BOARD */
+.posts, .altposts { background-color: #333; margin-bottom: 30px; border: 1px solid #000; width: 98%; }
+.posts .post, .altposts .post { padding: 20px 10px 5px 10px; }
+.posts .subject, .altposts .subject { background-color: #008; padding-left: 3px; border-bottom: 1px solid #000; }
+.posts .name, .altposts .name { text-align: right; background-color: #333; padding-right: 1px; }
+.name a, .name a:link, .name a:visited  { color: #00f; text-decoration: underline; }
+.name a:hover { color: #000; text-decoration: none; }
+.edit { font-size: small; }
+.right { text-align: right; }
+
+
+/* MISC */
+.center { text-align: center; }
+h1, h2 {
+	margin-bottom: 12px;
+	background-color: #00f;
+	color: #fff;
+	font-size: 8pt;
+	font-weight: bold;
+}
+input, textarea {
+	font-size: 8pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+/* NAVIGATION / LINKS */
+#nav {
+	width: 100%;
+	margin-top: -12px;
+}
+#nav .navlist {
+	list-style: none;
+	margin: 0;
+	width: 100%;
+	border: none;
+}
+#nav .navlist li {
+	border-bottom: 1px solid #00f;
+}
+#nav .navlist li a, #nav .navlist li a:link {
+	display: block;
+	width: 100%;
+	background-color: #000;
+	padding-left: 7px;
+	margin-right: -7px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+#nav .navlist li a:hover {
+	background-color: #008;
+	color: #ccc;
+}
+#nav form p {
+	text-align: center;
+	margin: 3px auto;
+}
+a:link { color: #00f; }
+a:visited { color: #00f; }
+a:hover { color: #008; }
+a:active { color: #008; }
