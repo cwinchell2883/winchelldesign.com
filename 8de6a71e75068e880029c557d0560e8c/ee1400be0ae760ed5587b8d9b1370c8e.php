@@ -3,13 +3,18 @@
 date_default_timezone_set('America/Chicago');
 
 class Deploy {
-
+    
     /**
-     * A callback function to call after the deploy has finished.
-     * 
-     * @var callback
+     * A little security using the web hook secret.
      */
-    public $post_deploy;
+    private $secret;
+    private $remote;
+    private $gitDir;
+    private $data;
+    private $event;
+    private $delivery;
+    private $gitOutput;
+    private $gitExitCode;
 
     /**
      * The name of the file that will be used for logging deployments. Set to 
@@ -50,6 +55,13 @@ class Deploy {
     private $_directory;
 
     /**
+     * A callback function to call after the deploy has finished.
+     * 
+     * @var callback
+     */
+    public $post_deploy;
+
+    /**
      * Sets up defaults.
      * 
      * @param  string  $directory  Directory where your website is located
@@ -60,7 +72,7 @@ class Deploy {
         // Determine the directory path
         $this->_directory = realpath($directory).DIRECTORY_SEPARATOR;
 
-        $available_options = array('log', 'date_format', 'branch', 'remote');
+        $available_options = array('log', 'date_format', 'branch', 'remote', 'secret');
 
         foreach ($options as $option => $value)
         {
@@ -106,6 +118,10 @@ class Deploy {
      */
     public function execute()
     {
+        if (!$this->validate())
+        {
+            return false;
+        }
         try
         {
             // Make sure we're in the right directory
@@ -136,6 +152,72 @@ class Deploy {
             $this->log($e, 'ERROR');
         }
     }
+    
+    /**
+     * Validates the secret.
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+    public function getDelivery()
+    {
+        return $this->delivery;
+    }
+    public function getEvent()
+    {
+        return $this->event;
+    }
+    public function getGitDir()
+    {
+        return $this->gitDir;
+    }
+    public function getGitOutput()
+    {
+        return $this->gitOutput;
+    }
+    public function getRemote()
+    {
+        return $this->remote;
+    }
+    public function getSecret()
+    {
+        return $this->secret;
+    }
+    public function getGitExitCode()
+    {
+        return $this->gitExitCode;
+    }
+    public function validate()
+    {
+        $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
+        $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
+        $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
+        $payload = file_get_contents('php://input');
+        if (!isset($signature, $event, $delivery))
+        {
+            return false;
+        }
+        if (!$this->validateSignature($signature, $payload))
+        {
+            return false;
+        }
+        $this->data = json_decode($payload,true);
+        $this->event = $event;
+        $this->delivery = $delivery;
+        
+        return true;
+    }
+    protected function validateSignature($gitHubSignatureHeader, $payload)
+    {
+        list ($algo, $gitHubSignature) = explode("=", $gitHubSignatureHeader);
+        if ($algo !== 'sha1') {
+            // see https://developer.github.com/webhooks/securing/
+            return false;
+        }
+        $payloadHash = hash_hmac($algo, $payload, $this->_secret);
+        return ($payloadHash === $gitHubSignature);
+    }
 
 }
 
@@ -144,7 +226,8 @@ $options = array(
     'log' => 'cfe9ef66e171c419a4c84a7da78c278c.log',
     'date_format' => 'Y-m-d H:i:sP',
     'branch' => 'master',
-    'remote' => 'origin'
+    'remote' => 'origin',
+    'secret' => 'b27d1b9c731aa6a996f3c7cf5266841e5f19377f'
 );
 $deploy = new Deploy('/home/cwinchell/winchelldesign.com', $options);
 
