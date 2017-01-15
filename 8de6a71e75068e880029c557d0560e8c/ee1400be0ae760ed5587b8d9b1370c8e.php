@@ -227,7 +227,7 @@ $options = array(
     'date_format' => 'Y-m-d H:i:sP',
     'branch' => 'master',
     'remote' => 'origin',
-    'secret' => ''
+    'secret' => file_get_contents('/home/cwinchell/.htpasswd-winchelldesign.com')
 );
 $deploy = new Deploy('/home/cwinchell/winchelldesign.com', $options);
 
