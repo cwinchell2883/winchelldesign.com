@@ -6,15 +6,10 @@ class Deploy {
     
     /**
      * A little security using the web hook secret.
+     * private $delivery;
+     * private $event;
      */
     private $_secret;
-    private $remote;
-    private $gitDir;
-    private $data;
-    private $event;
-    private $delivery;
-    private $gitOutput;
-    private $gitExitCode;
 
     /**
      * The name of the file that will be used for logging deployments. Set to 
@@ -118,104 +113,106 @@ class Deploy {
      */
     public function execute()
     {
-        if (!$this->validate())
+        if ( ! $this->validate())
         {
+	    $this->log('Validation failed; terminating');
             return false;
         }
-        try
-        {
-            // Make sure we're in the right directory
-            chdir($this->_directory);
-            $this->log('Changing working directory... ');
-
-            // Discard any changes to tracked files since our last deploy
-            exec('git reset --hard HEAD', $output);
-            $this->log('Reseting repository... '.implode(' ', $output));
-
-            // Update the local repository
-            exec('git pull '.$this->_remote.' '.$this->_branch, $output);
-            $this->log('Pulling in changes... '.implode(' ', $output));
-
-            // Secure the .git directory
-            exec('chmod -R og-rx .git');
-            $this->log('Securing .git directory... ');
-
-            if (is_callable($this->post_deploy))
+	else
+	{
+	    $this->log('Validation successful; continuing...');
+            try
             {
-                call_user_func($this->post_deploy, $this->_data);
-            }
+                // Make sure we're in the right directory
+                chdir($this->_directory);
+                $this->log('Changing working directory... ');
 
-            $this->log('Deployment successful.');
-        }
-        catch (Exception $e)
-        {
-            $this->log($e, 'ERROR');
-        }
+                // Discard any changes to tracked files since our last deploy
+                exec('git reset --hard HEAD', $output);
+                $this->log('Reseting repository... '.implode(' ', $output));
+
+                // Update the local repository
+                exec('git pull '.$this->_remote.' '.$this->_branch, $output);
+                $this->log('Pulling in changes... '.implode(' ', $output));
+
+                // Secure the .git directory
+                exec('chmod -R og-rx .git');
+                $this->log('Securing .git directory... ');
+
+                if (is_callable($this->post_deploy))
+                {
+                    call_user_func($this->post_deploy, $this->_data);
+                }
+
+                $this->log('Deployment successful.');
+            }
+            catch (Exception $e)
+            {
+                $this->log($e, 'ERROR');
+            }
+	}
     }
     
     /**
      * Validates the secret.
      */
-    public function getData()
-    {
-        return $this->data;
-    }
-    public function getDelivery()
-    {
-        return $this->delivery;
-    }
-    public function getEvent()
-    {
-        return $this->event;
-    }
-    public function getGitDir()
-    {
-        return $this->gitDir;
-    }
-    public function getGitOutput()
-    {
-        return $this->gitOutput;
-    }
-    public function getRemote()
-    {
-        return $this->remote;
-    }
-    public function getSecret()
-    {
-        return $this->secret;
-    }
-    public function getGitExitCode()
-    {
-        return $this->gitExitCode;
-    }
     public function validate()
     {
+	// Capture GITHUB headers
         $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
-        $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
-        $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
+
+	/** Possible remove...
+         * $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
+         * $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
+	 */
+
+	// Capture payload
         $payload = file_get_contents('php://input');
-        if (!isset($signature, $event, $delivery))
-        {
-            return false;
-        }
-        if (!$this->validateSignature($signature, $payload))
-        {
-            return false;
-        }
-        $this->data = json_decode($payload,true);
-        $this->event = $event;
-        $this->delivery = $delivery;
-        
-        return true;
+
+	/** We may want to ignore $event and $delivery...
+	 * if (!isset($signature, $event, $delivery))
+         * {
+         *     return false;
+         * }
+	 */
+	// If we do not have the proper headers, terminate early
+	if ( ! isset($signature, $payload))
+	{
+	    return false;
+	}
+
+	/** We can simplify this statement...
+         * if (!$this->validateSignature($signature, $payload))
+         * {
+         *     return false;
+         * }
+	 */
+	// Validate the signature
+	return ( ! $this->validateSignature($signature, $payload));
+
+	/** We may not need these...
+	 * $this->data = json_decode($payload,true);
+         * $this->event = $event;
+         * $this->delivery = $delivery;
+         *
+         *  return true;
+	 */
     }
     protected function validateSignature($gitHubSignatureHeader, $payload)
     {
+	// Separate the algorithm from the signature
         list ($algo, $gitHubSignature) = explode("=", $gitHubSignatureHeader);
-        if ($algo !== 'sha1') {
-            // see https://developer.github.com/webhooks/securing/
+
+	// According to https://developer.github.com/webhooks/securing/ the algorithm should be sha1
+        if ($algo !== 'sha1')
+	{
             return false;
         }
+
+	// Create the payload hash
         $payloadHash = hash_hmac($algo, $payload, $this->_secret);
+
+	// Is our signature or payload valid?
         return ($payloadHash === $gitHubSignature);
     }
 
@@ -223,11 +220,11 @@ class Deploy {
 
 // This is just an example
 $options = array(
-    'log' => 'cfe9ef66e171c419a4c84a7da78c278c.log',
+    'log' => '/home/cwinchell/logs/winchelldesign.com/_deploy.log',
     'date_format' => 'Y-m-d H:i:sP',
     'branch' => 'master',
     'remote' => 'origin',
-    'secret' => file_get_contents('/home/cwinchell/.htpasswd-winchelldesign.com')
+    'secret' => file_get_contents('/home/cwinchell/htaccess/.htpasswd-winchelldesign.com')
 );
 $deploy = new Deploy('/home/cwinchell/winchelldesign.com', $options);
 
