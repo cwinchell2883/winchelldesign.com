@@ -1,5 +1,6 @@
 <?php
 
+/** Test Comment **/
 echo "Hello World!";
 
 // Compress Website
