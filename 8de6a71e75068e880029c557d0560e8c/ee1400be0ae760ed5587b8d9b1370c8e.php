@@ -220,7 +220,7 @@ class Deploy {
 
 // This is just an example
 $options = array(
-    'log' => '/home/cwinchell/logs/winchelldesign.com/_deploy.log',
+    'log' => 'cfe9ef66e171c419a4c84a7da78c278c.log',
     'date_format' => 'Y-m-d H:i:sP',
     'branch' => 'master',
     'remote' => 'origin',
