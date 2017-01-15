@@ -1,5 +1,6 @@
 <?php
 
+/** Set time zone **/
 date_default_timezone_set('America/Chicago');
 
 class Deploy {
