@@ -7,7 +7,7 @@ class Deploy {
     /**
      * A little security using the web hook secret.
      */
-    private $secret;
+    private $_secret;
     private $remote;
     private $gitDir;
     private $data;
