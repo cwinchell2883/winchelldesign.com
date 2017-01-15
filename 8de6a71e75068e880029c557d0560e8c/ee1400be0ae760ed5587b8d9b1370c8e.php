@@ -6,8 +6,6 @@ class Deploy {
     
     /**
      * A little security using the web hook secret.
-     * private $delivery;
-     * private $event;
      */
     private $_secret;
 
@@ -113,14 +111,16 @@ class Deploy {
      */
     public function execute()
     {
+        // If validation fails we must end
         if ( ! $this->validate())
         {
-	    $this->log('Validation failed; terminating');
+            $this->log('Validation failed; terminating');
             return false;
         }
-	else
-	{
-	    $this->log('Validation successful; continuing...');
+        // Else, we continue...
+        else
+        {
+            $this->log('Validation successful; continuing...');
             try
             {
                 // Make sure we're in the right directory
@@ -150,72 +150,50 @@ class Deploy {
             {
                 $this->log($e, 'ERROR');
             }
-	}
+        }
     }
     
     /**
-     * Validates the secret.
+     * Parse the headers and call validation
      */
     public function validate()
     {
-	// Capture GITHUB headers
+	   // Capture GITHUB headers
         $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
 
-	/** Possible remove...
-         * $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
-         * $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
-	 */
-
-	// Capture payload
+	   // Capture payload
         $payload = file_get_contents('php://input');
 
-	/** We may want to ignore $event and $delivery...
-	 * if (!isset($signature, $event, $delivery))
-         * {
-         *     return false;
-         * }
-	 */
-	// If we do not have the proper headers, terminate early
-	if ( ! isset($signature, $payload))
-	{
-	    return false;
-	}
+    	// If we do not have the proper headers, terminate early
+    	if ( ! isset($signature, $payload))
+    	{
+    	    return false;
+    	}
 
-	/** We can simplify this statement...
-         * if (!$this->validateSignature($signature, $payload))
-         * {
-         *     return false;
-         * }
-	 */
-	// Validate the signature
-	return ( ! $this->validateSignature($signature, $payload));
-
-	/** We may not need these...
-	 * $this->data = json_decode($payload,true);
-         * $this->event = $event;
-         * $this->delivery = $delivery;
-         *
-         *  return true;
-	 */
+	   // Validate the signature
+	   return ( ! $this->validateSignature($signature, $payload));
     }
+    
+    /**
+     * Validate the signature
+     */
     protected function validateSignature($gitHubSignatureHeader, $payload)
     {
-	// Separate the algorithm from the signature
+        // Separate the algorithm from the signature
         list ($algo, $gitHubSignature) = explode("=", $gitHubSignatureHeader);
 
-	// According to https://developer.github.com/webhooks/securing/ the algorithm should be sha1
+        // According to https://developer.github.com/webhooks/securing/ the algorithm should be sha1
         if ($algo !== 'sha1')
-	{
+        {
             return false;
         }
-
-	// Create the payload hash
+        
+        // Create the payload hash
         $payloadHash = hash_hmac($algo, $payload, $this->_secret);
 
-	// Is our signature or payload valid?
+        // Is our signature or payload valid?
         return ($payloadHash === $gitHubSignature);
     }
-
 }
 
 // This is just an example
